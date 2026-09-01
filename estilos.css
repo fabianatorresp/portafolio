@@ -1,0 +1,388 @@
+/* variable */
+:root {
+    --blanco: #EDE9E6;
+    --verde: #5C766D;
+    --negro: #2C2C2C;
+}
+
+* { /* *= para todos*/
+    box-sizing: border-box; /*por defecto / se adhiere al modelado de caja*/
+    /* quita los margenes que vienen por defecto */
+    margin: 0;
+    padding: 0;
+}
+
+html { /* html: etiqueta general de toda la pagina */
+    scroll-behavior: smooth;
+}
+
+/* el ancho maximo es el 100% del contenedor que tenga */
+img {
+    max-width: 100%;
+}
+
+
+h1 {
+    color: var(--blanco);
+    font-size: 50px;
+}
+
+.nombre {
+    color: var(--negro);
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* 
+tamaño de contenido: width | height
+padding: padding top (padding-top) | padding right | padding bottom | padding left
+borde: border-> grosor(2px) tipoDeBorde(solid) colorDelBorde 
+    - border radius: redondear las esquinas
+margen: margin top | margin right | margin bottom | margin left
+
+color: cambiar color del texto
+    - background-color (cambiar color de fondo)
+
+
+flex-box:
+contenedor (div | section)
+display: flex   ->siempre
+    - flex-direction: row | column 
+    - justify-content: row: horizontal | column: vertical
+        flex-start
+        flex-end
+        *center
+        space-between -> agregar un ancho
+        space-around
+        space-evenly
+    - aling items: row: vertical | column: horizontal
+        flex-start
+        flex-end
+        *center 
+        baseline
+        stretch
+    - gap: agrega espacio entre los elementos
+
+flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de la pantalla
+
+*/
+
+.hero {
+    background-color: var(--verde);
+    width: 100%;
+    height: 100vh;  /* vh= a la ultura de la pantalla*/
+    padding: 20px; /*agrega el mismo espacio a todos lados*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.portfolio {
+    font-size: 15vw;
+}
+
+.fechaHoy {
+    background-color: var(--blanco);
+    border-radius: 50vh;
+    font-size: 3vw;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.junior {
+    font-size: 2vw;
+    color: var(--blanco);
+}
+
+.info {
+    display: flex;
+    width: 55vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: var(--blanco);
+}
+
+
+body {
+    /* para cambiar tipografia */
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  background-color: var(--blanco);
+}
+
+h1, h2, h3 {
+    font-family: "Inter";
+
+    /* altura de la linea */
+    line-height: 1;
+
+    /* espacio entre letras */
+    letter-spacing: -2px;
+
+    /* transformacion de texto (mayuscula / minuscula) */
+    text-transform: capitalize;
+}
+
+.btn-primary {
+    /* quita el subrayado del link */
+    text-decoration: none;
+
+    color: var(--verde);
+    background-color: var(--blanco);
+
+    /* el primer valor: modifica valor arriba y abajo */
+    /* el segundo valor modifica los costados */
+    padding: 10px 15px;
+
+    /* OPCIONAL: el ancho, solid (linea solida / borde solido), color */
+    border: 2px solid var(--verde);
+
+    /* botones estilo pill: 50vw / 50% (view width: ancho de la vista)*/
+    border-radius: 50vw;
+
+    /* transicion: all (para todos los cambios) s (segundos (250ms/300ms)) tipoDeTransicion(opcional/ ease) */
+    transition: all 250ms;
+}
+
+/* :hover -> pseudo clase / modifica etiqueta | modifica estilos cuando el mouse esta encima del elemento */
+.btn-primary:hover{
+    /* borde blanco, fondo verde, letras blancas */
+    border: 2px solid var(--blanco);
+    background-color: var(--verde);
+    color: var(--blanco);
+}
+
+/* tarea
+ejemplos
+info sobre tipografia (titulo y textos)
+colores (1 blanco, 1 negro, 1 acento primario, 1 acento secundario (opcional))
+posicionamiento en css: position static, relative, absolute, fixed, sticky (escoger para)
+
+static: es la posicion por defecto
+
+relative: se mueve relativamente a la posicion static
+ej:
+.class {
+    position: relative
+    top: 40px
+    (la posicion se moveria 40px por debajo de la posicion static )
+}
+
+absolute: necesita anclarse a otra etquieta (padre) o de lo contrario usa el cuerpo del 
+documento para posicionarse
+para anclar: la etiqueta padre debe tener position relative
+
+fixed: su posicion es relativa a lo que se puede ver en la pagina (si bajas o subes, se queda en
+el mismo lugar / se mueve junto con la pagina)
+
+sticky: se ve como un elemento static pero al subir o baja en la pagina se mueve tambien
+ej:
+.sticky {
+    position: sticky
+    bottom: 0
+    (se queda pegado a la parte inferior de la pagina)
+}
+*/
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 50px;   
+}
+
+.navegacion .link {
+    text-decoration: none;
+    color: var(--negro);
+
+    /* se agrega en el elemento sin hover */
+    transition: all 250ms;
+
+    padding-top: 0;
+}
+
+.navegacion .link:hover {
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+.seccion {
+    /* altura minima  */
+    min-height: 100vh;
+    /* se hace un margen para que el header no tape la seccion */
+    scroll-margin-top: 90px;
+    color: var(--negro);
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+}
+
+.tituloSeccion {
+    letter-spacing: -1px;
+    /* padding: 20px; */
+    color: var(--negro);
+    font-size: 70px;
+}
+
+.texto {
+    color: var(--negro);
+    padding: 15px;
+    margin-bottom: 30px;
+
+}
+
+.perfiles {
+    text-decoration: none;
+    padding: 10px 45px;
+    background-color: var(--verde);
+    border-radius: 50vh;
+    color: var(--blanco);
+}
+
+
+.subtitulo {
+    padding: 20px;
+    letter-spacing: -1px;
+    font-size: 35px;
+}
+
+.lista {
+    padding-left: 35px;
+}
+
+.contenedorIzquierda {
+    padding-right: 200px;
+}
+
+#Tarjeta {
+    background-color: var(--verde);
+    width: 350px;
+    height: 350px;
+    position: relative;
+
+}
+
+/* mover el circulo en relacion a la Tarjeta */
+#circulo {
+    background-color: var(--blanco);
+    width: 200px;
+    height: 200px;
+    /* top de la Tarjeta */
+    top: 50px;
+    left: 30px;
+    border-radius: 50vw;
+    position: absolute;
+    z-index: 0;
+}
+
+.etiquetaTarjeta {
+    background-color: darkcyan;
+
+    /* el primer valor: padding arriba y abajo | segundo valor: padding izquiera y derecha */
+    padding: 10px 25px;
+    border-radius: 50vw;
+
+    color: var(--blanco);
+    position: absolute;
+    z-index: 100;
+}
+
+#cumple {
+    top: 120px;
+    left:-80px;
+}
+
+#texto {
+    bottom: 80px;
+    right: -25px;
+}
+
+.contacto {
+    background-color: var(--negro);
+    color: var(--blanco);
+
+    /* top derecha abajo */
+    padding: 20px 60px;
+    width: 350px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.contacto li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* modificar el h3 en etiqueta contacto */
+.contacto h3 {
+    font-size: 35px;
+    padding-bottom: 17px;
+}
+
+.fecha {
+    font-size: 20px;
+    
+}
+
+.contenido {
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.contenedorGrande{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fotoPerfil {
+    width: 600px;
+    height: 500px;
+    z-index: 10; /* coordenada de profundidad */
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;  /* recorta y mantiene la proporcion | solo para imagenes */
+}
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.aboutIzquierda {
+    width: 40%;
+}
+
+.nombreActividad {
+    font-size: 20px;
+}
+
+.actividad {
+    padding-bottom: 40px;
+    width: 35%;
+}
+
+.fotoActividad {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.contenedorActividades {
+    display: flex;
+}

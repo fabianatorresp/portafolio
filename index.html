@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Fabiana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+<link rel="stylesheet" href="estilos.css"> <!-- esta linea siempre va al final -->
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="nombre">Fabiana</a>
+        <!-- etiqueta de navegacion -->
+        <nav class="navegacion">
+            <a href="#about" class="link">About Me</a>
+            <a href="#resume" class="link">Resume</a>
+            <a href="#work" class="link">Work</a>
+            <a href="mailto:fabianatp@gmail.com" target="_blank" class="btn-primary">Get In Touch</a>
+        </nav>
+    </header>
+    <!-- Heroe section: seccion que se muestra primero -->
+    <section class="hero">
+        <h1 class="portfolio">Portfolio</h1>
+        <div class="info">
+            <p class="junior">Junior in Software Engineering</p>
+            <p class="fechaHoy">2026</p>
+        </div>
+    
+    </section>
+
+    <!-- id es un atributo unico -->
+    <section class="seccion" id="about">
+
+        <div class="aboutIzquierda"> 
+        <h2 class="tituloSeccion"> Hello 👋
+            <br>I'm Fabiana
+        </h2>
+        <p class="texto">I am a third year student attenting Monmouth University pursuing 
+        a Bachelor's Degree in Software Engineering and a minor in Cybersecurity. I am currently 
+        learning learning Java, HTML, and TypeScript. Seeking a summer internship to obtain 
+        more knowledge and looking forward to more collaborative projects to gain experience 
+        in the field and put my skills to practice. </p>
+            <a href="https://www.linkedin.com/in/fabianatp/" target="_blank" class="perfiles">LinkedIn Profile 🔍</a>
+            <a href="https://github.com/fabianatp" target="_blank" class="perfiles">GitHub Profile</a>
+        </div>
+
+    <!-- <div> pone una cosa por debajo de otra -->
+    <div>
+        <div id="Tarjeta">
+        <img src="img/perfilAbout.png" alt="imagen de perfil" class="fotoPerfil">
+        <!-- etiqueta que no contiene ningun elemento pero puede tener texto -->
+        <span id="circulo"></span> 
+        <span class="etiquetaTarjeta" id="cumple">June 14th 2006</span> 
+        <span class="etiquetaTarjeta" id="texto">Peruvian</span>
+        </div>
+
+        <div class="contacto">
+            <h3>Contact</h3>
+            <ul>
+                <li>
+                    <!-- <i> icono | font awesome (fa) | solid (tipo de icono) -->
+                    <i class="fa-solid fa-location-dot"></i>
+                    Long Branch, NJ 
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    fabianatp@gmail.com 
+                </li>
+            </ul>
+        </div> 
+
+    </div>
+
+    </section>
+
+    <section class="seccion" id="resume">
+        <h2 class="tituloSeccion">Resume</h2>
+
+    <div class="contenedorGrande">
+        <div>
+        <h3 class="subtitulo">Education</h3>
+        <ul class="lista">
+            <strong class="fecha">2022 - 2024</strong>
+            <p class="contenido">Henry P. Becton Regional High School</p>
+            <strong class="fecha">2024 - 2028</strong>
+            <p class="contenido">Monmouth University</p>
+        </ul>
+
+        <h3 class="subtitulo">Experience</h3>
+        <ul class="lista">
+            <strong class="fecha">2024- Present</strong>
+            <p class="contenido"> Human Resources Expert - Target</p>
+            <strong class="fecha">2025 - Present</strong>
+            <p class="contenido">Student Technology Assitant - Monmouth University</p>
+        </ul>
+        </div>
+
+        
+        <div class="contenedorIzquierda">
+            <div>
+            <h3 class="subtitulo">Coding Skills</h3>
+                <ul class="lista">
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+        
+        <div>
+        <h3 class="subtitulo">Languages</h3>
+          <ul class="lista">
+            <li>Spanish (Native)</li>
+            <li>English (Fluent)</li>
+        </ul>
+        </div>
+
+        </div>
+
+    </div>
+
+    </section>
+
+    <section class="seccion" id="work">
+        <h2 class="tituloSeccion">Work</h2>
+        <h3 class="subtitulo">Involvement</h3> 
+
+        <div class="contenedorActividades">
+         <ul class="lista">
+            <div>
+            <strong class="nombreActividad">IEEE/ACM Member </strong>
+            <p class="actividad">Student branch of the international IEEE and 
+                ACM organizations. We provide out of classroom support and resources to reach our 
+            professional goals</p>
+            <strong class="nombreActividad">Quantum Computing Research-2026 Summer Research Project
+            </strong>
+            <p class="actividad">Analyzed datasets to determine the accuracy of a quantum computer upon detecting malware vs. the one of a classical model
+            </p>
+            </div>
+        </ul>
+
+        <div>
+        <img src="img/actividad.jpeg" alt="imagen de actividad" class="fotoActividad">
+        </div>
+
+        </div>
+    </section>
+
+    
+</body>
+</html>

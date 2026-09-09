@@ -3,6 +3,9 @@
     --blanco: #EDE9E6;
     --verde: #5C766D;
     --negro: #2C2C2C;
+    --azul: #2C405E;
+    --rosa: #E2CCC7;
+    --gris: #D2CDC6;
 }
 
 * { /* *= para todos*/
@@ -68,7 +71,7 @@ flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de 
 */
 
 .hero {
-    background-color: var(--verde);
+    background-color: var(--azul);
     width: 100%;
     height: 100vh;  /* vh= a la ultura de la pantalla*/
     padding: 20px; /*agrega el mismo espacio a todos lados*/
@@ -95,6 +98,13 @@ flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de 
     font-size: 2vw;
     color: var(--blanco);
 }
+
+.deslizar {
+    font-size: 1vw;
+    color: var(--blanco);
+    align-items: flex-end;
+}
+
 
 .info {
     display: flex;
@@ -138,7 +148,7 @@ h1, h2, h3 {
     /* quita el subrayado del link */
     text-decoration: none;
 
-    color: var(--verde);
+    color: var(--azul);
     background-color: var(--blanco);
 
     /* el primer valor: modifica valor arriba y abajo */
@@ -146,7 +156,7 @@ h1, h2, h3 {
     padding: 10px 15px;
 
     /* OPCIONAL: el ancho, solid (linea solida / borde solido), color */
-    border: 2px solid var(--verde);
+    border: 2px solid var(--azul);
 
     /* botones estilo pill: 50vw / 50% (view width: ancho de la vista)*/
     border-radius: 50vw;
@@ -244,7 +254,7 @@ ej:
 .perfiles {
     text-decoration: none;
     padding: 10px 45px;
-    background-color: var(--verde);
+    background-color: var(--azul);
     border-radius: 50vh;
     color: var(--blanco);
 }
@@ -265,10 +275,11 @@ ej:
 }
 
 #Tarjeta {
-    background-color: var(--verde);
+    background-color: var(--gris);
     width: 350px;
     height: 350px;
     position: relative;
+    border-radius: 2vw;
 
 }
 
@@ -286,7 +297,7 @@ ej:
 }
 
 .etiquetaTarjeta {
-    background-color: darkcyan;
+    background-color: var(--azul);
 
     /* el primer valor: padding arriba y abajo | segundo valor: padding izquiera y derecha */
     padding: 10px 25px;
@@ -312,8 +323,9 @@ ej:
     color: var(--blanco);
 
     /* top derecha abajo */
-    padding: 20px 60px;
+    padding: 30px 60px;
     width: 350px;
+    border-radius: 2vw;
 
 }
 
@@ -349,12 +361,15 @@ ul {
 }
 
 .fotoPerfil {
-    width: 600px;
-    height: 500px;
+    object-fit: cover;  /* recorta y mantiene la proporcion | solo para imagenes */
+    width: 200px;
     z-index: 10; /* coordenada de profundidad */
+    border-radius: 2vw;
     position: absolute;
     bottom: 0;
-    object-fit: cover;  /* recorta y mantiene la proporcion | solo para imagenes */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #about {
@@ -370,17 +385,19 @@ ul {
 
 .nombreActividad {
     font-size: 20px;
+    width: 80%;
 }
 
 .actividad {
     padding-bottom: 40px;
-    width: 35%;
+    width: 80%;
+    flex-wrap: wrap;
 }
 
 .fotoActividad {
-    width: 300px;
-    height: 300px;
     object-fit: cover;
+    width: 600px;
+    border-radius: 3vh;
 }
 
 .contenedorActividades {

@@ -79,7 +79,7 @@ flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de 
     align-items: center;
     flex-direction: column;
     justify-content: center;
-
+    position: relative;
 }
 
 .portfolio {
@@ -102,7 +102,9 @@ flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de 
 .deslizar {
     font-size: 1vw;
     color: var(--blanco);
-    align-items: flex-end;
+    position: absolute;
+    bottom: 100px;
+
 }
 
 
@@ -121,6 +123,7 @@ flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de 
     position: sticky;
     top: 0;
     background-color: var(--blanco);
+    z-index: 1000;
 }
 
 
@@ -279,22 +282,13 @@ ej:
     width: 350px;
     height: 350px;
     position: relative;
-    border-radius: 2vw;
-
+    border-radius: 2vw 2vw 0vw 0vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+/* display:flex -> afecta los elemente adentro del contenedor (no el contenedor) */
 
-/* mover el circulo en relacion a la Tarjeta */
-#circulo {
-    background-color: var(--blanco);
-    width: 200px;
-    height: 200px;
-    /* top de la Tarjeta */
-    top: 50px;
-    left: 30px;
-    border-radius: 50vw;
-    position: absolute;
-    z-index: 0;
-}
 
 .etiquetaTarjeta {
     background-color: var(--azul);
@@ -325,7 +319,8 @@ ej:
     /* top derecha abajo */
     padding: 30px 60px;
     width: 350px;
-    border-radius: 2vw;
+    /* superior izquierda | superior derecha | inferior derecha | inferior izquierda*/
+    border-radius: 0vw 0vw 2vw 2vw;
 
 }
 
@@ -362,14 +357,11 @@ ul {
 
 .fotoPerfil {
     object-fit: cover;  /* recorta y mantiene la proporcion | solo para imagenes */
-    width: 200px;
+    width: 220px;
     z-index: 10; /* coordenada de profundidad */
     border-radius: 2vw;
     position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    align-self: center;
 }
 
 #about {

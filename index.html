@@ -15,11 +15,14 @@
         <a href="/" class="nombre">Fabiana</a>
         <!-- etiqueta de navegacion -->
         <nav class="navegacion">
+            <!-- #seccion: va a la seccion con el nombre de ese id -->
             <a href="#about" class="link">About Me</a>
             <a href="#resume" class="link">Resume</a>
             <a href="#work" class="link">Work</a>
             <a href="mailto:fabianatp@gmail.com" target="_blank" class="btn-primary">Get In Touch</a>
         </nav>
+        <button class="botonTema">🌑</button>
+        <button class="botonTema">☀️</button>
     </header>
     <!-- Heroe section: seccion que se muestra primero -->
     <section class="hero">
@@ -44,8 +47,16 @@
         learning learning Java, HTML, and TypeScript. Seeking a summer internship to obtain 
         more knowledge and looking forward to more collaborative projects to gain experience 
         in the field and put my skills to practice. </p>
-            <a href="https://www.linkedin.com/in/fabianatp/" target="_blank" class="perfiles">LinkedIn Profile 🔍</a>
-            <a href="https://github.com/fabianatp" target="_blank" class="perfiles">GitHub Profile</a>
+    
+            <a 
+            href="https://www.linkedin.com/in/fabianatp/" target="_blank" class="perfiles">LinkedIn Profile
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+           
+            <a 
+            href="https://github.com/fabianatp" target="_blank" class="perfiles">GitHub Profile
+            <i class="fa-brands fa-github"></i>
+            </a>
         </div>
 
     <!-- <div> pone una cosa por debajo de otra -->
@@ -109,7 +120,7 @@
                 </ul>
             </div>
         
-        <div>
+        <div class="idiomas">
         <h3 class="subtitulo">Languages</h3>
           <ul class="lista">
             <li>Spanish (Native)</li>
@@ -134,8 +145,8 @@
             <p class="actividad">Student branch of the international IEEE and 
                 ACM organizations. We provide out of classroom support and resources to reach our 
             professional goals</p>
-            <strong class="nombreActividad">Quantum Computing Research-2026 Summer Research Project
-            </strong>
+            <strong class="nombreActividad">Hardware Robustness of Quantum Machine Learning Kernels for Malware
+            Detection Research</strong>
             <p class="actividad">Analyzed datasets to determine the accuracy of a quantum computer upon detecting malware vs. the one of a classical model
             </p>
             </div>
@@ -147,6 +158,35 @@
 
         </div>
     </section>
+
+    <section class="seccion" id="seccion">
+  <h2>Contact</h2>
+
+  <!-- form: contenedor tipo formulario -->
+  <form class="formulario">
+    <!-- etiqueta label siempre debe tener "for": el valor debe ser igual al valor del input del id-->
+    <label for="nombre">Name</label>
+    <input type="text" id="nombre" placeholder="Your name">
+    <!-- input recibe texto -->
+
+    <label for="correo">Email</label>
+    <input type="texto" id="correo" placeholder="youremail@email.com">
+    <!-- input tipo email: primera barrera de seguridad -->
+
+    <label for="mensaje">Message</label>
+    <textarea id="mensaje" rows="5" ></textarea>
+    <!-- area donde puedes ponder texto -->
+    <!-- rows: saltos de linea en el mensaje -->
+    <!-- cols: columnas -->
+
+    <button type="submit" class="boton-enviar">Submit</button>
+    <!-- atributo submit es unico para botones de formulario. Cuando le das click recarga la pagina -->
+
+    <p class="mensaje-error"></p>
+  </form>
+
+  
+</section>
 
 <!-- linkear un archivo java scrypt -->
  <script src="main.js"></script>   

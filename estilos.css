@@ -1,12 +1,17 @@
 /* variable */
 :root {
     --blanco: #EDE9E6;
-    --verde: #5C766D;
     --negro: #2C2C2C;
-    --azul: #2C405E;
-    --rosa: #E2CCC7;
+    --azul: #1C2B42;
     --gris: #D2CDC6;
 }
+
+body.oscuro {
+    --blanco: #1C2B42;
+    --negro: #EDE9E6;
+    --azul: #EDE9E6;
+}
+
 
 * { /* *= para todos*/
     box-sizing: border-box; /*por defecto / se adhiere al modelado de caja*/
@@ -71,9 +76,9 @@ flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de 
 */
 
 .hero {
-    background-color: var(--azul);
+    background-color: var(--blanco);
     width: 100%;
-    height: 100vh;  /* vh= a la ultura de la pantalla*/
+    height: 95vh;  /* vh= a la ultura de la pantalla*/
     padding: 20px; /*agrega el mismo espacio a todos lados*/
     display: flex;
     align-items: center;
@@ -84,24 +89,26 @@ flex wrap: se hace un salto de linea cuando los elementos superan el tamaño de 
 
 .portfolio {
     font-size: 15vw;
+    color: var(--azul);
 }
 
 .fechaHoy {
-    background-color: var(--blanco);
+    background-color: var(--azul);
     border-radius: 50vh;
     font-size: 3vw;
     padding: 10px 20px;
     font-weight: bold;
+    color: var(--blanco);
 }
 
 .junior {
     font-size: 2vw;
-    color: var(--blanco);
+    color: var(--azul);
 }
 
 .deslizar {
     font-size: 1vw;
-    color: var(--blanco);
+    color: var(--negro);
     position: absolute;
     bottom: 100px;
 
@@ -172,7 +179,7 @@ h1, h2, h3 {
 .btn-primary:hover{
     /* borde blanco, fondo verde, letras blancas */
     border: 2px solid var(--blanco);
-    background-color: var(--verde);
+    background-color: var(--azul);
     color: var(--blanco);
 }
 
@@ -378,6 +385,7 @@ ul {
 .nombreActividad {
     font-size: 20px;
     width: 80%;
+    padding: 10px;
 }
 
 .actividad {
@@ -394,4 +402,9 @@ ul {
 
 .contenedorActividades {
     display: flex;
+}
+
+/* falta arreglar ? */
+.idiomas {
+    padding-top: 100px;
 }
